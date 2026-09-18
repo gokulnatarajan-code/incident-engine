@@ -1,0 +1,41 @@
+[
+  {
+    "service": "database",
+    "root_cause": "The database service failed due to connection pool exhaustion (max_connections=20 reached).",
+    "evidence": "[database] ERROR: connection pool exhausted, max_connections=20 reached",
+    "confidence": 100,
+    "incident_id": 1
+  },
+  {
+    "service": "database",
+    "root_cause": "The database failed because its connection pool reached the maximum limit of 20 connections, as shown by the error log.",
+    "evidence": "[database] ERROR: connection pool exhausted, max_connections=20 reached",
+    "confidence": 95,
+    "incident_id": 2
+  },
+  {
+    "service": "database",
+    "root_cause": "Database connection pool exhausted, causing the API to timeout on upstream calls.",
+    "evidence": "[database] ERROR: connection pool exhausted, max_connections=20 reached",
+    "confidence": 95,
+    "incident_id": 3
+  },
+  {
+    "service": "database",
+    "root_cause": "Connection pool exhausted, causing downstream API timeouts",
+    "evidence": "[database] ERROR: connection pool exhausted, max_connections=20 reached",
+    "confidence": 95,
+    "similar": "Database connection pool exhausted, causing the API to timeout on upstream calls.",
+    "alert_count": 101,
+    "incident_id": 4
+  },
+  {
+    "service": "temp-sensor-1",
+    "root_cause": "sensor read timeout after 3 retries indicates sensor failure",
+    "evidence": "[temp-sensor-1] ERROR: sensor read timeout after 3 retries",
+    "confidence": 95,
+    "similar": null,
+    "alert_count": 2,
+    "incident_id": 5
+  }
+]

@@ -1,7 +1,8 @@
 ﻿import json
 import os
 
-HISTORY_PATH = "../logs/history.json"
+BASE = os.path.dirname(os.path.abspath(__file__))
+HISTORY_PATH = os.path.join(BASE, "..", "logs", "history.json")
 
 def load_history():
     if not os.path.exists(HISTORY_PATH):
@@ -13,6 +14,7 @@ def save_incident(diagnosis):
     history = load_history()
     diagnosis["incident_id"] = len(history) + 1
     history.append(diagnosis)
+    os.makedirs(os.path.dirname(HISTORY_PATH), exist_ok=True)
     with open(HISTORY_PATH, "w") as f:
         json.dump(history, f, indent=2)
     return diagnosis["incident_id"]

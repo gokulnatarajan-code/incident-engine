@@ -1,0 +1,101 @@
+{"ts": 1789725364.3236117, "service": "database", "level": "ERROR", "message": "connection pool exhausted, max_connections=20 reached"}
+{"ts": 1789725364.324623, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 0)"}
+{"ts": 1789725364.324623, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 1)"}
+{"ts": 1789725364.324623, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 2)"}
+{"ts": 1789725364.3264022, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 3)"}
+{"ts": 1789725364.3264022, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 4)"}
+{"ts": 1789725364.3450432, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 5)"}
+{"ts": 1789725364.3465524, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 6)"}
+{"ts": 1789725364.3484223, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 7)"}
+{"ts": 1789725364.349456, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 8)"}
+{"ts": 1789725364.3504484, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 9)"}
+{"ts": 1789725364.351439, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 10)"}
+{"ts": 1789725364.351439, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 11)"}
+{"ts": 1789725364.3524466, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 12)"}
+{"ts": 1789725364.3524466, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 13)"}
+{"ts": 1789725364.3534398, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 14)"}
+{"ts": 1789725364.3534398, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 15)"}
+{"ts": 1789725364.3544402, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 16)"}
+{"ts": 1789725364.355446, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 17)"}
+{"ts": 1789725364.355446, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 18)"}
+{"ts": 1789725364.356437, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 19)"}
+{"ts": 1789725364.3577173, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 20)"}
+{"ts": 1789725364.3577173, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 21)"}
+{"ts": 1789725364.3587322, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 22)"}
+{"ts": 1789725364.3597322, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 23)"}
+{"ts": 1789725364.3597322, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 24)"}
+{"ts": 1789725364.3607295, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 25)"}
+{"ts": 1789725364.3617952, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 26)"}
+{"ts": 1789725364.3617952, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 27)"}
+{"ts": 1789725364.3628068, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 28)"}
+{"ts": 1789725364.363814, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 29)"}
+{"ts": 1789725364.363814, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 30)"}
+{"ts": 1789725364.3648074, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 31)"}
+{"ts": 1789725364.3648074, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 32)"}
+{"ts": 1789725364.3663158, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 33)"}
+{"ts": 1789725364.3663158, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 34)"}
+{"ts": 1789725364.3673306, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 35)"}
+{"ts": 1789725364.3683288, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 36)"}
+{"ts": 1789725364.3683288, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 37)"}
+{"ts": 1789725364.3693264, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 38)"}
+{"ts": 1789725364.3693264, "service": "api", "level": "ERROR", "message": "upstream timeout calling database (attempt 39)"}
+{"ts": 1789725364.370326, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (800ms)"}
+{"ts": 1789725364.3713267, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (810ms)"}
+{"ts": 1789725364.3713267, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (820ms)"}
+{"ts": 1789725364.3723295, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (830ms)"}
+{"ts": 1789725364.3723295, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (840ms)"}
+{"ts": 1789725364.3733287, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (850ms)"}
+{"ts": 1789725364.3733287, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (860ms)"}
+{"ts": 1789725364.374326, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (870ms)"}
+{"ts": 1789725364.374326, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (880ms)"}
+{"ts": 1789725364.374326, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (890ms)"}
+{"ts": 1789725364.3753474, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (900ms)"}
+{"ts": 1789725364.3763292, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (910ms)"}
+{"ts": 1789725364.3763292, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (920ms)"}
+{"ts": 1789725364.377393, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (930ms)"}
+{"ts": 1789725364.3783958, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (940ms)"}
+{"ts": 1789725364.379407, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (950ms)"}
+{"ts": 1789725364.379407, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (960ms)"}
+{"ts": 1789725364.380422, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (970ms)"}
+{"ts": 1789725364.380422, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (980ms)"}
+{"ts": 1789725364.3813937, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (990ms)"}
+{"ts": 1789725364.3813937, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1000ms)"}
+{"ts": 1789725364.3825395, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1010ms)"}
+{"ts": 1789725364.3825395, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1020ms)"}
+{"ts": 1789725364.3835642, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1030ms)"}
+{"ts": 1789725364.3835642, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1040ms)"}
+{"ts": 1789725364.3845503, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1050ms)"}
+{"ts": 1789725364.3845503, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1060ms)"}
+{"ts": 1789725364.3860633, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1070ms)"}
+{"ts": 1789725364.3860633, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1080ms)"}
+{"ts": 1789725364.3860633, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1090ms)"}
+{"ts": 1789725364.3870769, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1100ms)"}
+{"ts": 1789725364.3880813, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1110ms)"}
+{"ts": 1789725364.3880813, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1120ms)"}
+{"ts": 1789725364.3890765, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1130ms)"}
+{"ts": 1789725364.3901045, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1140ms)"}
+{"ts": 1789725364.3901045, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1150ms)"}
+{"ts": 1789725364.391078, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1160ms)"}
+{"ts": 1789725364.3921132, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1170ms)"}
+{"ts": 1789725364.3921132, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1180ms)"}
+{"ts": 1789725364.3930821, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1190ms)"}
+{"ts": 1789725364.3940783, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1200ms)"}
+{"ts": 1789725364.3940783, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1210ms)"}
+{"ts": 1789725364.3954117, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1220ms)"}
+{"ts": 1789725364.3954117, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1230ms)"}
+{"ts": 1789725364.3964195, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1240ms)"}
+{"ts": 1789725364.3974319, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1250ms)"}
+{"ts": 1789725364.3974319, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1260ms)"}
+{"ts": 1789725364.398443, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1270ms)"}
+{"ts": 1789725364.398443, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1280ms)"}
+{"ts": 1789725364.398443, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1290ms)"}
+{"ts": 1789725364.3994446, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1300ms)"}
+{"ts": 1789725364.400465, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1310ms)"}
+{"ts": 1789725364.400465, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1320ms)"}
+{"ts": 1789725364.401441, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1330ms)"}
+{"ts": 1789725364.401441, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1340ms)"}
+{"ts": 1789725364.4024417, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1350ms)"}
+{"ts": 1789725364.403443, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1360ms)"}
+{"ts": 1789725364.40444, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1370ms)"}
+{"ts": 1789725364.40444, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1380ms)"}
+{"ts": 1789725364.405442, "service": "frontend", "level": "WARN", "message": "slow response from /api/orders (1390ms)"}
