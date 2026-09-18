@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incident Engine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e14;
+    --panel: #10151d;
+    --border: #1e2731;
+    --text: #d8dee9;
+    --text-dim: #6b7787;
+    --accent: #4fc3a1;
+    --accent-dim: #2d6b57;
+    --sev-low: #6b7787;
+    --sev-med: #d4a94e;
+    --sev-high: #e0793c;
+    --sev-crit: #d9534f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0;
+  }
+
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(79, 195, 161, 0.6);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(79, 195, 161, 0.5); }
+    70%  { box-shadow: 0 0 0 8px rgba(79, 195, 161, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 195, 161, 0); }
+  }
+
+  .sources {
+    font-size: 12px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+  }
+
+  .hero {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 52px;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text);
+  }
+
+  .stat .num.accent { color: var(--accent); }
+
+  .stat .label {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-top: 6px;
+  }
+
+  .arrow {
+    color: var(--text-dim);
+    font-size: 24px;
+    align-self: center;
+  }
+
+  .trigger-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  button.trigger {
+    background: var(--accent);
+    color: #06110d;
+    border: none;
+    padding: 12px 22px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button.trigger:hover { background: #5fd4b2; }
+  button.trigger:disabled { background: var(--border); color: var(--text-dim); cursor: default; }
+
+  .status-line {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .section-label {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .incident {
+    display: flex;
+    border-left: 3px solid var(--sev-med);
+    background: var(--panel);
+    margin-bottom: 14px;
+    padding: 18px 20px;
+  }
+
+  .incident.high { border-left-color: var(--sev-high); }
+  .incident.crit { border-left-color: var(--sev-crit); }
+  .incident.low  { border-left-color: var(--sev-low); }
+  .incident.resolved { opacity: 0.55; }
+
+  .incident-body { flex: 1; }
+
+  .incident-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+
+  .service-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .confidence {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .root-cause {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  .evidence {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    color: var(--sev-high);
+    background: #0d0705;
+    border: 1px solid #2a1712;
+    padding: 8px 10px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .similar {
+    font-size: 12.5px;
+    color: var(--sev-med);
+    margin-bottom: 12px;
+  }
+
+  .incident-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  button.fix {
+    background: transparent;
+    border: 1px solid var(--accent-dim);
+    color: var(--accent);
+    padding: 8px 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button.fix:hover { background: rgba(79, 195, 161, 0.08); }
+  button.fix:disabled {
+    border-color: var(--border);
+    color: var(--text-dim);
+    cursor: default;
+    background: transparent;
+  }
+
+  .empty {
+    color: var(--text-dim);
+    font-size: 14px;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="pulse-dot"></div>
+    Incident Engine
+  </div>
+  <div class="sources">software · hardware</div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="stat">
+      <div class="num" id="alertCount">—</div>
+      <div class="label">alerts detected</div>
+    </div>
+    <div class="arrow">→</div>
+    <div class="stat">
+      <div class="num accent" id="incidentCount">—</div>
+      <div class="label">correlated incidents</div>
+    </div>
+  </div>
+
+  <div class="trigger-row">
+    <button class="trigger" id="triggerBtn" onclick="triggerChaos()">Trigger incident</button>
+    <div class="status-line" id="statusLine"></div>
+  </div>
+
+  <div class="section-label">Diagnosis</div>
+  <div id="incidents">
+    <div class="empty">No incidents yet — trigger one above.</div>
+  </div>
+</main>
+
+<script>
+const API = "http://localhost:8000";
+
+function severityClass(confidence) {
+  if (confidence >= 90) return "crit";
+  if (confidence >= 70) return "high";
+  if (confidence >= 40) return "low";
+  return "";
+}
+
+async function triggerChaos() {
+  const btn = document.getElementById("triggerBtn");
+  const status = document.getElementById("statusLine");
+  btn.disabled = true;
+  status.innerText = "triggering failure...";
+
+  await fetch(`${API}/trigger-chaos`, { method: "POST" });
+  status.innerText = "correlating alerts...";
+
+  await loadIncidents();
+  btn.disabled = false;
+}
+
+async function loadIncidents() {
+  const status = document.getElementById("statusLine");
+  const res = await fetch(`${API}/incidents`);
+  const data = await res.json();
+
+  document.getElementById("alertCount").innerText = data.total_alerts;
+  document.getElementById("incidentCount").innerText = data.incidents.length;
+  status.innerText = `last run · ${data.incidents.length} incident(s) diagnosed`;
+
+  const container = document.getElementById("incidents");
+  container.innerHTML = "";
+
+  if (data.incidents.length === 0) {
+    container.innerHTML = '<div class="empty">No incidents yet — trigger one above.</div>';
+    return;
+  }
+
+  data.incidents.forEach(inc => {
+    const card = document.createElement("div");
+    card.className = "incident " + severityClass(inc.confidence);
+    card.innerHTML = `
+      <div class="incident-body">
+        <div class="incident-top">
+          <div class="service-name">${inc.service}</div>
+          <div class="confidence">${inc.confidence}% confidence</div>
+        </div>
+        <div class="root-cause">${inc.root_cause}</div>
+        <div class="evidence">${inc.evidence}</div>
+        ${inc.similar ? `<div class="similar">Matches incident #${inc.incident_id - 1} — ${inc.similar}</div>` : ""}
+        <div class="incident-actions">
+          <button class="fix" onclick="applyFix('${inc.service}', this)">Apply fix</button>
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+async function applyFix(service, btn) {
+  btn.innerText = "applying...";
+  btn.disabled = true;
+  const res = await fetch(`${API}/apply-fix/${service}`, { method: "POST" });
+  const data = await res.json();
+  btn.innerText = "Resolved — " + data.action;
+  btn.closest(".incident").classList.add("resolved");
+}
+</script>
+
+</body>
+</html>
